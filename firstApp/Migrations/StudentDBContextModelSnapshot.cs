@@ -29,9 +29,8 @@ namespace firstApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Age")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
 
                     b.Property<string>("Gender")
                         .IsRequired()
@@ -42,6 +41,9 @@ namespace firstApp.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(100)")
                         .HasColumnName("StudentName");
+
+                    b.Property<int>("Standard")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
