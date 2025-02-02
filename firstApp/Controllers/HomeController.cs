@@ -30,7 +30,6 @@ namespace firstApp.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Student std)
         {
             if (ModelState.IsValid)
@@ -69,7 +68,6 @@ namespace firstApp.Controllers
             return View(stdData);
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, Student std)
         {
             if (ModelState.IsValid)
