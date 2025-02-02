@@ -17,6 +17,10 @@ namespace firstApp.Models
         public int Age { get; set; }
         [Required]
         public int Standard { get; set; }
+        [Required]
+        public int subject { get; set; }
+        [Required]
+        public int hobby { get; set; }
 
     }
 }
